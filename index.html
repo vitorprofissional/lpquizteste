@@ -1,0 +1,285 @@
+Com certeza\! Criei para você os códigos para duas páginas:
+
+1.  **`index.html` (Página de Captura):** Uma landing page com um visual moderno, usando as cores que você pediu, focada em converter o visitante.
+2.  **`obrigado.html` (Página de Agradecimento):** A página para onde o usuário é direcionado após preencher o formulário, confirmando o sucesso do cadastro.
+
+### Como Usar:
+
+1.  Crie uma pasta para o seu projeto.
+2.  Dentro dela, crie um arquivo chamado `index.html` e cole o primeiro código nele.
+3.  Crie outro arquivo chamado `obrigado.html` e cole o segundo código nele.
+4.  Abra o arquivo `index.html` no seu navegador para ver a página de captura. Ao preencher o formulário, você será levado para a página de obrigado.
+
+-----
+
+### 1\. Código da Página de Captura (`index.html`)
+
+Esta página usa um fundo escuro (preto), um gradiente de roxo e azul para o título e o botão de ação, criando um visual impactante e profissional.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Captura Exclusiva</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #121212; /* Preto suave */
+            --text-color: #EAEAEA;
+            --purple-color: #8A2BE2; /* Roxo (BlueViolet) */
+            --blue-color: #4A90E2;   /* Azul */
+            --dark-gray: #1F1F1F;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .capture-container {
+            background-color: var(--dark-gray);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #2a2a2a;
+        }
+
+        .headline {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            /* Efeito de gradiente no texto */
+            background: linear-gradient(90deg, var(--purple-color), var(--blue-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .sub-headline {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #b0b0b0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--background-color);
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text-color);
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-input::placeholder {
+            color: #888;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--purple-color);
+            box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.2);
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            background: linear-gradient(90deg, var(--purple-color), var(--blue-color));
+            background-size: 200% 100%;
+            transition: background-position 0.5s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-position: right center;
+            transform: scale(1.02);
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <main class="capture-container">
+        <h1 class="headline">Acesso Imediato</h1>
+        <p class="sub-headline">Inscreva-se com seu melhor e-mail e receba conteúdos exclusivos que vão transformar sua carreira.</p>
+        
+        <form action="/obg" method="GET">
+            <div class="form-group">
+                <input type="text" name="nome" class="form-input" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" class="form-input" placeholder="Seu melhor e-mail" required>
+            </div>
+            <button type="submit" class="cta-button">QUERO ME INSCREVER</button>
+        </form>
+
+        <p class="footer-text">Respeitamos sua privacidade. Nada de spam.</p>
+    </main>
+</body>
+</html>
+```
+
+-----
+
+### 2\. Código da Página de Obrigado (`obrigado.html`)
+
+Esta página mantém a identidade visual e dá ao usuário uma confirmação clara e positiva, com um ícone de sucesso.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obrigado pelo seu Cadastro!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #121212;
+            --text-color: #EAEAEA;
+            --purple-color: #8A2BE2;
+            --blue-color: #4A90E2;
+            --dark-gray: #1F1F1F;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .thank-you-container {
+            background-color: var(--dark-gray);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid #2a2a2a;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-success {
+            width: 80px;
+            height: 80px;
+            stroke-width: 2;
+            margin-bottom: 20px;
+        }
+        
+        .icon-success .circle {
+            stroke: var(--blue-color);
+            stroke-dasharray: 240;
+            stroke-dashoffset: 240;
+            animation: draw-circle 1s 0.3s ease-out forwards;
+        }
+
+        .icon-success .checkmark {
+            stroke: var(--purple-color);
+            stroke-dasharray: 60;
+            stroke-dashoffset: 60;
+            animation: draw-checkmark 0.5s 0.8s ease-out forwards;
+        }
+
+        @keyframes draw-circle { to { stroke-dashoffset: 0; } }
+        @keyframes draw-checkmark { to { stroke-dashoffset: 0; } }
+
+
+        .headline {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .sub-headline {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #b0b0b0;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            border: 2px solid var(--blue-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--blue-color);
+            background-color: transparent;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: var(--blue-color);
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="thank-you-container">
+        <svg class="icon-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+            <circle class="circle" cx="40" cy="40" r="38"/>
+            <path class="checkmark" d="M24 40l12 12 20-20"/>
+        </svg>
+
+        <h1 class="headline">Cadastro Confirmado!</h1>
+        <p class="sub-headline">
+            Obrigado! Enviamos um e-mail de confirmação para você. Em breve você receberá nossas melhores novidades.
+        </p>
+        
+        <a href="index.html" class="back-button">Voltar ao Início</a>
+    </main>
+</body>
+</html>
+```
